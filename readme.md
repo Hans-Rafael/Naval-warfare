@@ -49,7 +49,12 @@ Todo el código (funciones, variables y constantes) debe escribirse estrictament
       // Código indentado aquí
   }
   ```
-* **Indentación (Sangrado):** Ambos programadores deben configurar su editor de texto con un sangrado uniforme de **4 espacios** (o 1 Tabulador) para que el archivo no se desordene al fusionarlo.
+* **Indentación (Sangrado):** Ambos programadores deben configurar su editor de texto con un sangrado uniforme de **4 espacios** para que el archivo no se desordene al fusionarlo. El proyecto incluye un archivo `.editorconfig` en la raíz que aplica esta configuración automáticamente:
+  * **VS Code:** instalar la extensión `EditorConfig for VS Code` (`Ctrl+Shift+X` → buscar `EditorConfig for VS Code`).
+  * **CLion:** soporte nativo, no requiere nada extra.
+  * **Vim/Neovim:** instalar el plugin `editorconfig-vim`.
+  
+  Una vez instalada la extensión, al guardar el archivo (`Ctrl+S`) las reglas se aplican automáticamente. Podés verificarlo mirando la barra inferior de VS Code, debe mostrar `Spaces: 4`.
 * **Modularidad Obligatoria:** Ninguna función lógica debe escribirse directamente dentro del archivo de cabecera `funciones.h`. Este archivo solo sirve para declarar prototipos. Toda la "cocina" y el desarrollo del código va en `funciones.cpp`.
 
 ---

@@ -3,12 +3,6 @@
 
 using namespace std;
 
-int main()
-{
-    cout << "hello world" << endl;
-    funcionDePruebas();
-    return 0;
-}
 // --- DEFINICIÓN DE VARIABLES GLOBALES ---
 // Aquí deben definir e inicializar (darles un valor inicial) las variables del header:
 // Las 3 matrices (playerGrid, aiGrid, trackingGrid)
@@ -17,13 +11,14 @@ int main()
 // --- FUNCIÓN DEL MENÚ PRINCIPAL ---
 // ¿Qué debe hacer?: Imprimir el diseño del menú en pantalla (1. Jugar, 2. Instrucciones, 3. Salir).
 void showMainMenu()
+
 {
     // Usar std::cout para dibujar el menú textualmente con colores ANSI
 }
 
 int main()
 {
-    //*****Prueba  de moddularidad */
+    //*********Prueba de modularidad */
     cout << "hello world" << endl;
     funcionDePruebas();
     return 0;
