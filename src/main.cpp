@@ -3,6 +3,18 @@
 
 using namespace std;
 
+// --- HABILITA COLORES ANSI EN WINDOWS ---
+// Llamar SIEMPRE como primera línea del main(), antes de cualquier cout con color.
+// En Linux no hace nada (el #ifdef lo omite), así que es seguro en ambos sistemas.
+void enableAnsiColors() {
+#ifdef _WIN32
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE); // Obtiene el handle de la consola de Windows
+    DWORD dwMode = 0;
+    GetConsoleMode(hOut, &dwMode);
+    SetConsoleMode(hOut, dwMode | ENABLE_VIRTUAL_TERMINAL_PROCESSING); // Activa soporte ANSI
+#endif
+}
+
 // --- DEFINICIÓN DE VARIABLES GLOBALES ---
 // Aquí deben definir e inicializar (darles un valor inicial) las variables del header:
 // Las 3 matrices (playerGrid, aiGrid, trackingGrid)
@@ -18,6 +30,8 @@ void showMainMenu()
 
 int main()
 {
+    enableAnsiColors(); // Activa colores ANSI: necesario en Windows, inofensivo en Linux
+
     //*********Prueba de modularidad */
     cout << "hello world" << endl;
     funcionDePruebas();
