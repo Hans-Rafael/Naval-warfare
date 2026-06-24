@@ -1,5 +1,5 @@
-#ifndef FUNCTIONS_H
-#define FUNCTIONS_H
+#ifndef FUNCIONES_H
+#define FUNCIONES_H
 
 #include <iostream>
 #include <cstdlib> // para numeros aleatorios con rand() y srand()
@@ -29,6 +29,7 @@ void funcionDePruebas();
 // aquí las constantes del tamaño del mapa (5) y barcos máximos (3) usando 'const int'
 const int TAM_MAPA = 5; // o GRID_SIZE
 const int MAX_BARCOS = 3;
+const int TAMA_TABLERO= 5; //10; // Definición de la constante
 
 // --- MATRICES GLOBALES COMPARTIDAS ---
 //'extern char' le dice al compilador 'Esta variable existe, pero está definida en otro lugar'
@@ -46,7 +47,11 @@ extern int barcosIa;
 // =================================================================
 
 // PROTOTIPO 1: Nombre de la función para inicializar los tableros vacíos.
-void inicializarTableros();
+void inicializarTableros(
+    char tableroJuagador[][TAMA_TABLERO],
+    char tableroIA[][TAMA_TABLERO],
+    char tableroDisparos[][TAMA_TABLERO]
+);
 // PROTOTIPO 2: Nombre de la función para el menú donde el jugador pone sus barcos.
 void colocarBarcosJugador();
 

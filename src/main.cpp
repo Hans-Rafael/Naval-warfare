@@ -1,12 +1,13 @@
 #include <iostream>
-#include "functions.h" //../include/functions.h no fue necesario asi
+#include "funciones.h" //../include/funciones.h no fue necesario asi
 
 using namespace std;
 
 // --- HABILITA COLORES ANSI EN WINDOWS ---
 // Llamar SIEMPRE como primera línea del main(), antes de cualquier cout con color.
 // En Linux no hace nada (el #ifdef lo omite), así que es seguro en ambos sistemas.
-void enableAnsiColors() {
+void enableAnsiColors()
+{
 #ifdef _WIN32
     HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE); // Obtiene el handle de la consola de Windows
     DWORD dwMode = 0;
